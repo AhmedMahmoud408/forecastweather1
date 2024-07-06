@@ -22,7 +22,7 @@ async function getWeather(location) {
       "#showWeather"
     ).innerHTML = `<div class="lds-ring"><div></div><div></div><div></div><div></div></div>`;
     let res = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=3`
+      `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=3`
     );
     let finalResponse = await res.json();
     display(finalResponse);
